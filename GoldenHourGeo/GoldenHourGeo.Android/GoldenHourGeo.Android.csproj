@@ -119,6 +119,13 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoldenHourGeo.iOS\GoldenHourGeo.iOS.csproj">
+      <Project>{11FFAE94-EC24-4356-8CF2-A10C7EB4A054}</Project>
+      <Name>GoldenHourGeo.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\GoldenHourGeo\GoldenHourGeo.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

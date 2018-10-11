@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using GoldenHourGeo;
+using GoldenHourGeo.Infrastructure;
 
 namespace GoldenHourGeo
 {
@@ -10,10 +12,10 @@ namespace GoldenHourGeo
     {
         public string GetWeather(string lat, string lon)
         {
-            var apiKey = "9031f2290c8e051a16c1f23373951e8a";
+            var queryString = $"data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID={env.WEATHER_API_KEY}";
 
-            var client = new RestClient("http://api.openweathermap.org");
-            var request = new RestRequest("data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + apiKey, Method.GET);
+            var client = new RestClient(env.OPEN_WEATHER_API_HOST_URL);
+            var request = new RestRequest(queryString + , Method.GET);
             var queryResult = client.Execute(request);
             return queryResult.Content;
         }

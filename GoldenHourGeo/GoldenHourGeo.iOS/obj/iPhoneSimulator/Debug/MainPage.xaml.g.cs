@@ -13,8 +13,7 @@
 namespace GoldenHourGeo {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\jclee\\source\\repos\\GoldenHourGeo\\GoldenHourGeo\\GoldenHourGeo\\MainPage.xa" +
-        "ml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\jclee\\source\\repos\\GHourGeo\\GoldenHourGeo\\GoldenHourGeo\\MainPage.xaml")]
     public partial class MainPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

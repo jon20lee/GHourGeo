@@ -3642,7 +3642,6 @@ containing a value of this type.
         public static int beginning=0x7f0c003a;
         public static int blocking=0x7f0c0061;
         public static int bottom=0x7f0c0048;
-        public static int button=0x7f0c00a3;
         public static int buttonPanel=0x7f0c006d;
         public static int cancel_action=0x7f0c00c2;
         public static int center=0x7f0c004f;
@@ -3794,6 +3793,7 @@ containing a value of this type.
         public static int text2=0x7f0c001b;
         public static int textSpacerNoButtons=0x7f0c0074;
         public static int textSpacerNoTitle=0x7f0c0073;
+        public static int textView1=0x7f0c00a3;
         public static int text_input_password_toggle=0x7f0c00a2;
         public static int textinput_counter=0x7f0c0014;
         public static int textinput_error=0x7f0c0015;
