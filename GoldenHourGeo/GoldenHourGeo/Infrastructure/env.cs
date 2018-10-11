@@ -8,5 +8,6 @@ namespace GoldenHourGeo.Infrastructure
     {
         public const string WEATHER_API_KEY = "9031f2290c8e051a16c1f23373951e8a";
         public const string OPEN_WEATHER_API_HOST_URL =  "http://api.openweathermap.org";
+        public const string OPEN_WEATHER_API_RESOUCRE_WEATHER = "data/2.5/weather";
     }
 }

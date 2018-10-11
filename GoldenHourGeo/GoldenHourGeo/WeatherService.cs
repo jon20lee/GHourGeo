@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using GoldenHourGeo;
 using GoldenHourGeo.Infrastructure;
+using System.Dynamic;
 
 namespace GoldenHourGeo
 {
@@ -12,10 +13,12 @@ namespace GoldenHourGeo
     {
         public string GetWeather(string lat, string lon)
         {
-            var queryString = $"data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID={env.WEATHER_API_KEY}";
+            if (String.IsNullOrEmpty(lat) || String.IsNullOrEmpty(lon)) { return "{ Error: Lat and long values unavailable. }" ; }
+
+            var queryString = $"?lat={lat}&lon={lon}&APPID={env.WEATHER_API_KEY}";
 
             var client = new RestClient(env.OPEN_WEATHER_API_HOST_URL);
-            var request = new RestRequest(queryString + , Method.GET);
+            var request = new RestRequest(env.OPEN_WEATHER_API_RESOUCRE_WEATHER + queryString, Method.GET);
             var queryResult = client.Execute(request);
             return queryResult.Content;
         }
